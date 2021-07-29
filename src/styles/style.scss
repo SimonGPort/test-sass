@@ -1,0 +1,14 @@
+
+// Note SASS
+// Important de mettre l'import de variable avant l'import du header
+@import './variable';
+@import './header';
+
+.contact{
+    // @extend permet d'heriter le css d'une autre class
+    @extend header;
+    border-top:1px solid black;
+}
+
+
+

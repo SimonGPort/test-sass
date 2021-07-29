@@ -1,0 +1,31 @@
+
+// Un mixin permet d'ajouter du CSS dans le code
+@mixin flexCenter($direction, $background){
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background: $background;
+    flex-direction:$direction;
+}
+
+
+header{
+
+@include flexCenter(column,lightblue);
+
+    button{
+        // 3 facons de passer une couleur, 1.d'un array, 2. d'une variable, 3. d'une fonction. Les valeurs sont dans le dossier variable.scss
+    
+        // background-color:map-get($colors,primary);
+        // background-color:$primaryBtn;
+        background-color:color(primary);
+        &:hover{
+            background-color:hotpink;
+        }
+        &::after{
+            content:" and hello";
+        }
+    }
+    
+    }

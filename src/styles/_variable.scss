@@ -1,0 +1,10 @@
+$primaryBtn: red;
+
+$colors:(
+ primary:#005DFF,
+ accent:#FFF6BB
+);
+
+@function color($color-name){
+    @return map-get($colors,$color-name)
+}
